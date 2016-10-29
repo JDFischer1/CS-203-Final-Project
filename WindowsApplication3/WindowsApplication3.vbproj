@@ -71,13 +71,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="CustomPlaylist.Designer.vb">
+      <DependentUpon>CustomPlaylist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomPlaylist.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Mainform.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mainform.Designer.vb">
+      <DependentUpon>Mainform.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Music.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -93,16 +100,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Playlist.Designer.vb">
+      <DependentUpon>Playlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Playlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="CustomPlaylist.resx">
+      <DependentUpon>CustomPlaylist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <DependentUpon>Mainform.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Playlist.resx">
+      <DependentUpon>Playlist.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
