@@ -71,6 +71,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Country.vb" />
     <Compile Include="CustomPlaylist.Designer.vb">
       <DependentUpon>CustomPlaylist.vb</DependentUpon>
     </Compile>
@@ -106,6 +107,8 @@
     <Compile Include="Playlist.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Pop.vb" />
+    <Compile Include="Rock.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CustomPlaylist.resx">
