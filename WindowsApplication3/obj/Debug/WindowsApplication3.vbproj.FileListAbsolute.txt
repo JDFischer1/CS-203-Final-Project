@@ -1,1 +1,13 @@
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\bin\Debug\WindowsApplication3.exe.config
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\bin\Debug\WindowsApplication3.exe
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\bin\Debug\WindowsApplication3.pdb
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\bin\Debug\WindowsApplication3.xml
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.vbprojResolveAssemblyReference.cache
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.CustomPlaylist.resources
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.Mainform.resources
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.Playlist.resources
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.vbproj.GenerateResource.Cache
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.exe
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.xml
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.pdb

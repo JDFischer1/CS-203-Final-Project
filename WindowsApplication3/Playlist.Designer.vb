@@ -22,26 +22,28 @@ Partial Class Playlist
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lstSongList = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.radPop = New System.Windows.Forms.RadioButton()
-        Me.radRock = New System.Windows.Forms.RadioButton()
-        Me.radCountry = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.radCountry = New System.Windows.Forms.RadioButton()
+        Me.radRock = New System.Windows.Forms.RadioButton()
+        Me.radPop = New System.Windows.Forms.RadioButton()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ListBox1
+        'lstSongList
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(372, 67)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(296, 224)
-        Me.ListBox1.TabIndex = 0
+        Me.lstSongList.FormattingEnabled = True
+        Me.lstSongList.ItemHeight = 20
+        Me.lstSongList.Location = New System.Drawing.Point(372, 67)
+        Me.lstSongList.Name = "lstSongList"
+        Me.lstSongList.Size = New System.Drawing.Size(296, 224)
+        Me.lstSongList.TabIndex = 0
         '
         'Label1
         '
@@ -65,27 +67,16 @@ Partial Class Playlist
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Genre"
         '
-        'radPop
+        'RadioButton4
         '
-        Me.radPop.AutoSize = True
-        Me.radPop.Location = New System.Drawing.Point(19, 36)
-        Me.radPop.Name = "radPop"
-        Me.radPop.Size = New System.Drawing.Size(62, 24)
-        Me.radPop.TabIndex = 0
-        Me.radPop.TabStop = True
-        Me.radPop.Text = "Pop"
-        Me.radPop.UseVisualStyleBackColor = True
-        '
-        'radRock
-        '
-        Me.radRock.AutoSize = True
-        Me.radRock.Location = New System.Drawing.Point(19, 78)
-        Me.radRock.Name = "radRock"
-        Me.radRock.Size = New System.Drawing.Size(71, 24)
-        Me.radRock.TabIndex = 1
-        Me.radRock.TabStop = True
-        Me.radRock.Text = "Rock"
-        Me.radRock.UseVisualStyleBackColor = True
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(19, 163)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(89, 24)
+        Me.RadioButton4.TabIndex = 3
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "Custom"
+        Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'radCountry
         '
@@ -98,16 +89,27 @@ Partial Class Playlist
         Me.radCountry.Text = "Country"
         Me.radCountry.UseVisualStyleBackColor = True
         '
-        'RadioButton4
+        'radRock
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(19, 163)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(89, 24)
-        Me.RadioButton4.TabIndex = 3
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Custom"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.radRock.AutoSize = True
+        Me.radRock.Location = New System.Drawing.Point(19, 78)
+        Me.radRock.Name = "radRock"
+        Me.radRock.Size = New System.Drawing.Size(71, 24)
+        Me.radRock.TabIndex = 1
+        Me.radRock.TabStop = True
+        Me.radRock.Text = "Rock"
+        Me.radRock.UseVisualStyleBackColor = True
+        '
+        'radPop
+        '
+        Me.radPop.AutoSize = True
+        Me.radPop.Location = New System.Drawing.Point(19, 36)
+        Me.radPop.Name = "radPop"
+        Me.radPop.Size = New System.Drawing.Size(62, 24)
+        Me.radPop.TabIndex = 0
+        Me.radPop.TabStop = True
+        Me.radPop.Text = "Pop"
+        Me.radPop.UseVisualStyleBackColor = True
         '
         'btnOK
         '
@@ -127,26 +129,37 @@ Partial Class Playlist
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(760, 58)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 28
+        Me.DataGridView1.Size = New System.Drawing.Size(315, 233)
+        Me.DataGridView1.TabIndex = 7
+        '
         'Playlist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(809, 416)
+        Me.ClientSize = New System.Drawing.Size(1185, 669)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.lstSongList)
         Me.Name = "Playlist"
         Me.Text = "Playlist"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lstSongList As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents RadioButton4 As RadioButton
@@ -155,4 +168,5 @@ Partial Class Playlist
     Friend WithEvents radPop As RadioButton
     Friend WithEvents btnOK As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
