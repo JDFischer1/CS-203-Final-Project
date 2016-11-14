@@ -22,6 +22,7 @@ Partial Class Playlist
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lstSongList = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -31,9 +32,18 @@ Partial Class Playlist
         Me.radPop = New System.Windows.Forms.RadioButton()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvLibrary = New System.Windows.Forms.DataGridView()
+        Me.SongLibraryDataSet = New WindowsApplication3.SongLibraryDataSet()
+        Me.LibraryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LibraryTableAdapter = New WindowsApplication3.SongLibraryDataSetTableAdapters.LibraryTableAdapter()
+        Me.SongTitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ArtistDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GenreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LengthDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvLibrary, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SongLibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LibraryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lstSongList
@@ -129,21 +139,69 @@ Partial Class Playlist
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgvLibrary
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(760, 58)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 28
-        Me.DataGridView1.Size = New System.Drawing.Size(315, 233)
-        Me.DataGridView1.TabIndex = 7
+        Me.dgvLibrary.AllowUserToAddRows = False
+        Me.dgvLibrary.AllowUserToDeleteRows = False
+        Me.dgvLibrary.AutoGenerateColumns = False
+        Me.dgvLibrary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvLibrary.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SongTitleDataGridViewTextBoxColumn, Me.ArtistDataGridViewTextBoxColumn, Me.GenreDataGridViewTextBoxColumn, Me.LengthDataGridViewTextBoxColumn})
+        Me.dgvLibrary.DataSource = Me.LibraryBindingSource
+        Me.dgvLibrary.Location = New System.Drawing.Point(692, 58)
+        Me.dgvLibrary.Name = "dgvLibrary"
+        Me.dgvLibrary.ReadOnly = True
+        Me.dgvLibrary.RowTemplate.Height = 28
+        Me.dgvLibrary.Size = New System.Drawing.Size(507, 310)
+        Me.dgvLibrary.TabIndex = 7
+        '
+        'SongLibraryDataSet
+        '
+        Me.SongLibraryDataSet.DataSetName = "SongLibraryDataSet"
+        Me.SongLibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'LibraryBindingSource
+        '
+        Me.LibraryBindingSource.DataMember = "Library"
+        Me.LibraryBindingSource.DataSource = Me.SongLibraryDataSet
+        '
+        'LibraryTableAdapter
+        '
+        Me.LibraryTableAdapter.ClearBeforeFill = True
+        '
+        'SongTitleDataGridViewTextBoxColumn
+        '
+        Me.SongTitleDataGridViewTextBoxColumn.DataPropertyName = "Song Title"
+        Me.SongTitleDataGridViewTextBoxColumn.HeaderText = "Song Title"
+        Me.SongTitleDataGridViewTextBoxColumn.Name = "SongTitleDataGridViewTextBoxColumn"
+        Me.SongTitleDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ArtistDataGridViewTextBoxColumn
+        '
+        Me.ArtistDataGridViewTextBoxColumn.DataPropertyName = "Artist"
+        Me.ArtistDataGridViewTextBoxColumn.HeaderText = "Artist"
+        Me.ArtistDataGridViewTextBoxColumn.Name = "ArtistDataGridViewTextBoxColumn"
+        Me.ArtistDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'GenreDataGridViewTextBoxColumn
+        '
+        Me.GenreDataGridViewTextBoxColumn.DataPropertyName = "Genre"
+        Me.GenreDataGridViewTextBoxColumn.HeaderText = "Genre"
+        Me.GenreDataGridViewTextBoxColumn.Name = "GenreDataGridViewTextBoxColumn"
+        Me.GenreDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LengthDataGridViewTextBoxColumn
+        '
+        Me.LengthDataGridViewTextBoxColumn.DataPropertyName = "Length"
+        Me.LengthDataGridViewTextBoxColumn.HeaderText = "Length"
+        Me.LengthDataGridViewTextBoxColumn.Name = "LengthDataGridViewTextBoxColumn"
+        Me.LengthDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Playlist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1185, 669)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvLibrary)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.GroupBox1)
@@ -153,7 +211,9 @@ Partial Class Playlist
         Me.Text = "Playlist"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvLibrary, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SongLibraryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LibraryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -168,5 +228,12 @@ Partial Class Playlist
     Friend WithEvents radPop As RadioButton
     Friend WithEvents btnOK As Button
     Friend WithEvents btnCancel As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvLibrary As DataGridView
+    Friend WithEvents SongLibraryDataSet As SongLibraryDataSet
+    Friend WithEvents LibraryBindingSource As BindingSource
+    Friend WithEvents LibraryTableAdapter As SongLibraryDataSetTableAdapters.LibraryTableAdapter
+    Friend WithEvents SongTitleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ArtistDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents GenreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LengthDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
