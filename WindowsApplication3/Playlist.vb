@@ -11,7 +11,13 @@
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        Mainform.SetSongList(lstSongList.SelectedItem)
+        ' Mainform.SetSongList(lstSongList.SelectedItem)
+
+        If dgvLibrary.SelectedRows.Count > 0 Then
+            Mainform.SetSongList(dgvLibrary.SelectedRows(0).Cells(0).Value, dgvLibrary.SelectedRows(0).Cells(1).Value)
+
+        End If
+
         Me.Close()
     End Sub
 End Class

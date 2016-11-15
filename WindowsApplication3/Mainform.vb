@@ -8,7 +8,8 @@
 
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
         ' Get the song time and display in lblSongTimer (convert time from seconds to min:seconds)
-        numberSongSeconds = 150
+        numberSongSeconds = CInt(Playlist.dgvLibrary.SelectedRows(0).Cells(3).Value)
+
         lblSongTimer.Text = convertSecondstoMinutesSeconds(numberSongSeconds)
 
         btnPlay.Visible = False
@@ -30,9 +31,9 @@
         Return Str(songMinutes) & ":" & Str(songSeconds)
 
     End Function
-    Public Sub SetSongList(ByVal SongName As String)
+    Public Sub SetSongList(ByVal SongName As String, ByVal SongArtist As String)
         ' How many items are in the list?
-        lblNowPlaying.Text = SongName
+        lblNowPlaying.Text = SongName & "- " & SongArtist
 
         ' This goes into the Play button Click
         'lblSongTimer.Text = convertSecondstoMinutesSeconds(Songlist)
