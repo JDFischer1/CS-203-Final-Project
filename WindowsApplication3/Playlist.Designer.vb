@@ -113,7 +113,7 @@ Partial Class Playlist
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(335, 410)
+        Me.btnOK.Location = New System.Drawing.Point(172, 524)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(86, 45)
         Me.btnOK.TabIndex = 5

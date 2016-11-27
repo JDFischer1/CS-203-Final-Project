@@ -25,10 +25,10 @@
         Dim songMinutes As Integer
         Dim songSeconds As Integer
 
-        songMinutes = numberSongSeconds / 60
-        songSeconds = numberSongSeconds Mod 60
+        songMinutes = numberSongSeconds \ 60
+        songSeconds = (numberSongSeconds Mod 60)
 
-        Return Str(songMinutes) & ":" & Str(songSeconds)
+        Return songMinutes.ToString & ":" & songSeconds.ToString.PadLeft(2, "0"c)
 
     End Function
     Public Sub SetSongList(ByVal SongName As String, ByVal SongArtist As String)
