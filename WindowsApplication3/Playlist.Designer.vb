@@ -25,7 +25,7 @@ Partial Class Playlist
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.radCustom = New System.Windows.Forms.RadioButton()
         Me.radCountry = New System.Windows.Forms.RadioButton()
         Me.radRock = New System.Windows.Forms.RadioButton()
         Me.radPop = New System.Windows.Forms.RadioButton()
@@ -39,10 +39,15 @@ Partial Class Playlist
         Me.LibraryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SongLibraryDataSet = New WindowsApplication3.SongLibraryDataSet()
         Me.LibraryTableAdapter = New WindowsApplication3.SongLibraryDataSetTableAdapters.LibraryTableAdapter()
+        Me.GetbygenreToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.GenreToolStripLabel = New System.Windows.Forms.ToolStripLabel()
+        Me.GenreToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.GetbygenreToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvLibrary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SongLibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GetbygenreToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -56,7 +61,7 @@ Partial Class Playlist
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton4)
+        Me.GroupBox1.Controls.Add(Me.radCustom)
         Me.GroupBox1.Controls.Add(Me.radCountry)
         Me.GroupBox1.Controls.Add(Me.radRock)
         Me.GroupBox1.Controls.Add(Me.radPop)
@@ -67,16 +72,16 @@ Partial Class Playlist
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Genre"
         '
-        'RadioButton4
+        'radCustom
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(19, 163)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(89, 24)
-        Me.RadioButton4.TabIndex = 3
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Custom"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.radCustom.AutoSize = True
+        Me.radCustom.Location = New System.Drawing.Point(19, 163)
+        Me.radCustom.Name = "radCustom"
+        Me.radCustom.Size = New System.Drawing.Size(89, 24)
+        Me.radCustom.TabIndex = 3
+        Me.radCustom.TabStop = True
+        Me.radCustom.Text = "Custom"
+        Me.radCustom.UseVisualStyleBackColor = True
         '
         'radCountry
         '
@@ -113,7 +118,7 @@ Partial Class Playlist
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(172, 524)
+        Me.btnOK.Location = New System.Drawing.Point(296, 410)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(86, 45)
         Me.btnOK.TabIndex = 5
@@ -122,7 +127,7 @@ Partial Class Playlist
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(618, 410)
+        Me.btnCancel.Location = New System.Drawing.Point(478, 410)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(86, 45)
         Me.btnCancel.TabIndex = 6
@@ -141,7 +146,7 @@ Partial Class Playlist
         Me.dgvLibrary.Name = "dgvLibrary"
         Me.dgvLibrary.ReadOnly = True
         Me.dgvLibrary.RowTemplate.Height = 28
-        Me.dgvLibrary.Size = New System.Drawing.Size(507, 310)
+        Me.dgvLibrary.Size = New System.Drawing.Size(1045, 310)
         Me.dgvLibrary.TabIndex = 7
         '
         'SongTitleDataGridViewTextBoxColumn
@@ -150,6 +155,7 @@ Partial Class Playlist
         Me.SongTitleDataGridViewTextBoxColumn.HeaderText = "Song Title"
         Me.SongTitleDataGridViewTextBoxColumn.Name = "SongTitleDataGridViewTextBoxColumn"
         Me.SongTitleDataGridViewTextBoxColumn.ReadOnly = True
+        Me.SongTitleDataGridViewTextBoxColumn.Width = 250
         '
         'ArtistDataGridViewTextBoxColumn
         '
@@ -157,6 +163,7 @@ Partial Class Playlist
         Me.ArtistDataGridViewTextBoxColumn.HeaderText = "Artist"
         Me.ArtistDataGridViewTextBoxColumn.Name = "ArtistDataGridViewTextBoxColumn"
         Me.ArtistDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ArtistDataGridViewTextBoxColumn.Width = 200
         '
         'GenreDataGridViewTextBoxColumn
         '
@@ -186,11 +193,40 @@ Partial Class Playlist
         '
         Me.LibraryTableAdapter.ClearBeforeFill = True
         '
+        'GetbygenreToolStrip
+        '
+        Me.GetbygenreToolStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.GetbygenreToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenreToolStripLabel, Me.GenreToolStripTextBox, Me.GetbygenreToolStripButton})
+        Me.GetbygenreToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.GetbygenreToolStrip.Name = "GetbygenreToolStrip"
+        Me.GetbygenreToolStrip.Size = New System.Drawing.Size(1443, 32)
+        Me.GetbygenreToolStrip.TabIndex = 8
+        Me.GetbygenreToolStrip.Text = "GetbygenreToolStrip"
+        '
+        'GenreToolStripLabel
+        '
+        Me.GenreToolStripLabel.Name = "GenreToolStripLabel"
+        Me.GenreToolStripLabel.Size = New System.Drawing.Size(61, 29)
+        Me.GenreToolStripLabel.Text = "genre:"
+        '
+        'GenreToolStripTextBox
+        '
+        Me.GenreToolStripTextBox.Name = "GenreToolStripTextBox"
+        Me.GenreToolStripTextBox.Size = New System.Drawing.Size(100, 32)
+        '
+        'GetbygenreToolStripButton
+        '
+        Me.GetbygenreToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.GetbygenreToolStripButton.Name = "GetbygenreToolStripButton"
+        Me.GetbygenreToolStripButton.Size = New System.Drawing.Size(108, 29)
+        Me.GetbygenreToolStripButton.Text = "Getbygenre"
+        '
         'Playlist
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1185, 669)
+        Me.ClientSize = New System.Drawing.Size(1443, 669)
+        Me.Controls.Add(Me.GetbygenreToolStrip)
         Me.Controls.Add(Me.dgvLibrary)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOK)
@@ -203,13 +239,15 @@ Partial Class Playlist
         CType(Me.dgvLibrary, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LibraryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SongLibraryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GetbygenreToolStrip.ResumeLayout(False)
+        Me.GetbygenreToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents radCustom As RadioButton
     Friend WithEvents radCountry As RadioButton
     Friend WithEvents radRock As RadioButton
     Friend WithEvents radPop As RadioButton
@@ -223,4 +261,8 @@ Partial Class Playlist
     Friend WithEvents ArtistDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents GenreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LengthDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents GetbygenreToolStrip As ToolStrip
+    Friend WithEvents GenreToolStripLabel As ToolStripLabel
+    Friend WithEvents GenreToolStripTextBox As ToolStripTextBox
+    Friend WithEvents GetbygenreToolStripButton As ToolStripButton
 End Class

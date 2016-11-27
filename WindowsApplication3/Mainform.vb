@@ -7,16 +7,19 @@
     End Sub
 
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
-        ' Get the song time and display in lblSongTimer (convert time from seconds to min:seconds)
+        ' Get the song time and display in lblSongTimer (convert time from seconds to min:seconds)\
+
+
         numberSongSeconds = CInt(Playlist.dgvLibrary.SelectedRows(0).Cells(3).Value)
 
-        lblSongTimer.Text = convertSecondstoMinutesSeconds(numberSongSeconds)
 
-        btnPlay.Visible = False
+            lblSongTimer.Text = convertSecondstoMinutesSeconds(numberSongSeconds)
+
+            btnPlay.Visible = False
 
         ' Start the timCounter (set to one second each)
         timCounter.Interval = 1000
-        timCounter.Enabled = True
+            timCounter.Enabled = True
 
         ' Change the button to a pause button
     End Sub

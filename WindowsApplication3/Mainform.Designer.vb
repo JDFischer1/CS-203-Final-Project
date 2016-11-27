@@ -58,7 +58,7 @@ Partial Class Mainform
         Me.btnPlay.Image = CType(resources.GetObject("btnPlay.Image"), System.Drawing.Image)
         Me.btnPlay.Location = New System.Drawing.Point(170, 174)
         Me.btnPlay.Name = "btnPlay"
-        Me.btnPlay.Size = New System.Drawing.Size(110, 104)
+        Me.btnPlay.Size = New System.Drawing.Size(119, 104)
         Me.btnPlay.TabIndex = 1
         Me.btnPlay.UseVisualStyleBackColor = True
         '

@@ -11,39 +11,6 @@
         mSongTime = pSongTime
     End Sub
 
-    'Public Property Title() As String
-    '    Get
-    '        Return mTitle
-    '    End Get
-    '    Set(value As String)
-    '        mTitle = value
-    '    End Set
-    'End Property
-    'Public Property Artist As String
-    '    Get
-    '        Return mArtist
-    '    End Get
-    '    Set(value As String)
-    '        mArtist = value
-    '    End Set
-    'End Property
-    'Public Property Genre As String
-    '    Get
-    '        Return mGenre
-    '    End Get
-    '    Set(value As String)
-    '        mGenre = value
-    '    End Set
-    'End Property
-    'Public Property SongTime As Integer
-    '    Get
-    '        Return mSongTime
-    '    End Get
-    '    Set(value As Integer)
-    '        mSongTime = value
-    '    End Set
-    'End Property
-
 
     Public Function GetByGenre(ByVal genre As String) As DataTable
         Dim table As DataTable = adapter.GetData()
