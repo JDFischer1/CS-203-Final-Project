@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Playlist
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Playlist
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -42,7 +42,6 @@ Partial Class Playlist
         Me.GetbygenreToolStrip = New System.Windows.Forms.ToolStrip()
         Me.GenreToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.GenreToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.GetbygenreToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvLibrary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -196,30 +195,23 @@ Partial Class Playlist
         'GetbygenreToolStrip
         '
         Me.GetbygenreToolStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.GetbygenreToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenreToolStripLabel, Me.GenreToolStripTextBox, Me.GetbygenreToolStripButton})
+        Me.GetbygenreToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenreToolStripLabel, Me.GenreToolStripTextBox})
         Me.GetbygenreToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GetbygenreToolStrip.Name = "GetbygenreToolStrip"
-        Me.GetbygenreToolStrip.Size = New System.Drawing.Size(1443, 32)
+        Me.GetbygenreToolStrip.Size = New System.Drawing.Size(1443, 31)
         Me.GetbygenreToolStrip.TabIndex = 8
         Me.GetbygenreToolStrip.Text = "GetbygenreToolStrip"
         '
         'GenreToolStripLabel
         '
         Me.GenreToolStripLabel.Name = "GenreToolStripLabel"
-        Me.GenreToolStripLabel.Size = New System.Drawing.Size(61, 29)
+        Me.GenreToolStripLabel.Size = New System.Drawing.Size(61, 28)
         Me.GenreToolStripLabel.Text = "genre:"
         '
         'GenreToolStripTextBox
         '
         Me.GenreToolStripTextBox.Name = "GenreToolStripTextBox"
-        Me.GenreToolStripTextBox.Size = New System.Drawing.Size(100, 32)
-        '
-        'GetbygenreToolStripButton
-        '
-        Me.GetbygenreToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.GetbygenreToolStripButton.Name = "GetbygenreToolStripButton"
-        Me.GetbygenreToolStripButton.Size = New System.Drawing.Size(108, 29)
-        Me.GetbygenreToolStripButton.Text = "Getbygenre"
+        Me.GenreToolStripTextBox.Size = New System.Drawing.Size(100, 31)
         '
         'Playlist
         '
@@ -264,5 +256,4 @@ Partial Class Playlist
     Friend WithEvents GetbygenreToolStrip As ToolStrip
     Friend WithEvents GenreToolStripLabel As ToolStripLabel
     Friend WithEvents GenreToolStripTextBox As ToolStripTextBox
-    Friend WithEvents GetbygenreToolStripButton As ToolStripButton
 End Class

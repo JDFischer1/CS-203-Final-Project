@@ -20,20 +20,15 @@
         ' Mainform.SetSongList(lstSongList.SelectedItem)
 
         If dgvLibrary.SelectedRows.Count > 0 Then
-            Mainform.SetSongList(dgvLibrary.SelectedRows(0).Cells(0).Value, dgvLibrary.SelectedRows(0).Cells(1).Value)
-
+            Mainform.SetSongList(dgvLibrary.SelectedRows)
         End If
 
         Me.Close()
     End Sub
 
-    Private Sub GetbygenreToolStripButton_Click(sender As Object, e As EventArgs) Handles GetbygenreToolStripButton.Click
+    Private Sub GetbygenreToolStripButton_Click(sender As Object, e As EventArgs)
 
-        Try
-            Me.LibraryTableAdapter.Getbygenre(Me.SongLibraryDataSet.Library, GenreToolStripTextBox.Text)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
+        getGenre()
 
     End Sub
 
@@ -51,4 +46,27 @@
         End If
     End Sub
 
+    Private Sub radCountry_Click(sender As Object, e As EventArgs) Handles radCountry.Click
+        GenreToolStripTextBox.Text = "Country"
+        getGenre()
+    End Sub
+
+    Private Sub radPop_Click(sender As Object, e As EventArgs) Handles radPop.Click
+        GenreToolStripTextBox.Text = "Pop"
+        getGenre()
+    End Sub
+
+    Private Sub getGenre()
+        Try
+            Me.LibraryTableAdapter.Getbygenre(Me.SongLibraryDataSet.Library, GenreToolStripTextBox.Text)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub radRock_Click(sender As Object, e As EventArgs) Handles radRock.Click
+        GenreToolStripTextBox.Text = "Rock"
+        getGenre()
+    End Sub
 End Class

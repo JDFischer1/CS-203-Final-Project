@@ -126,6 +126,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SongLibraryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SongLibraryDataSet.vb">
+      <DependentUpon>SongLibraryDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CustomPlaylist.resx">
