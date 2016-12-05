@@ -13,6 +13,7 @@
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
 
         btnStop.Enabled = True
+        btnRewind.Enabled = True
         playSong()
 
     End Sub
@@ -34,7 +35,7 @@
         ' This goes into the Play button Click
         For songCount = SongNames.Count - 1 To 0 Step -1
 
-            lstNowPlaying.Items.Add(songList(songCount).Cells(titleColumn).Value & "              " & songList(songCount).Cells(artistColumn).Value)
+            lstNowPlaying.Items.Add(songList(songCount).Cells(titleColumn).Value & " - " & songList(songCount).Cells(artistColumn).Value)
 
         Next
         lstNowPlaying.SelectedIndex = 0
@@ -113,12 +114,22 @@
     Private Sub btnRewind_Click(sender As Object, e As EventArgs) Handles btnRewind.Click
 
         ' We are not at the end, just get the next song in the list
-        lstNowPlaying.SelectedIndex = lstNowPlaying.SelectedIndex - 1
-        numberSongSeconds = CInt(songList(lstNowPlaying.SelectedIndex).Cells(timeColumn).Value)
-        lblSongTimer.Text = convertSecondstoMinutesSeconds(numberSongSeconds)
-        If lstNowPlaying.SelectedIndex = 0 Then
-            btnRewind.Enabled = False
+        If lstNowPlaying.SelectedIndex > 0 Then
+            lstNowPlaying.SelectedIndex = lstNowPlaying.SelectedIndex - 1
+            numberSongSeconds = CInt(songList(lstNowPlaying.SelectedIndex).Cells(timeColumn).Value)
+            lblSongTimer.Text = convertSecondstoMinutesSeconds(numberSongSeconds)
+        Else
+            lstNowPlaying.SelectedIndex = lstNowPlaying.Items.Count - 1
+            '   lstNowPlaying.SelectedIndex = lstNowPlaying.SelectedIndex - 1
+            numberSongSeconds = CInt(songList(lstNowPlaying.SelectedIndex).Cells(timeColumn).Value)
+            lblSongTimer.Text = convertSecondstoMinutesSeconds(numberSongSeconds)
+            '        If lstNowPlaying.SelectedIndex = 0 Then
+            '       btnRewind.Enabled = False
         End If
 
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        Me.Close()
     End Sub
 End Class

@@ -19,6 +19,8 @@
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         ' Mainform.SetSongList(lstSongList.SelectedItem)
 
+
+
         If dgvLibrary.SelectedRows.Count > 0 Then
             Mainform.SetSongList(dgvLibrary.SelectedRows)
         End If
@@ -68,5 +70,6 @@
     Private Sub radRock_Click(sender As Object, e As EventArgs) Handles radRock.Click
         GenreToolStripTextBox.Text = "Rock"
         getGenre()
+
     End Sub
 End Class

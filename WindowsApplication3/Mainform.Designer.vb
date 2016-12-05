@@ -106,7 +106,7 @@ Partial Class Mainform
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(124, 30)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(211, 30)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'PlaylistToolStripMenuItem
