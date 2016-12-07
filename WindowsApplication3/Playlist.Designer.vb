@@ -23,6 +23,7 @@ Partial Class Playlist
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Playlist))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.radCustom = New System.Windows.Forms.RadioButton()
@@ -42,6 +43,9 @@ Partial Class Playlist
         Me.GetbygenreToolStrip = New System.Windows.Forms.ToolStrip()
         Me.GenreToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.GenreToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
+        Me.btnAdd = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnDelete = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvLibrary, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,23 +199,49 @@ Partial Class Playlist
         'GetbygenreToolStrip
         '
         Me.GetbygenreToolStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.GetbygenreToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenreToolStripLabel, Me.GenreToolStripTextBox})
+        Me.GetbygenreToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenreToolStripLabel, Me.GenreToolStripTextBox, Me.btnAdd, Me.ToolStripSeparator1, Me.btnDelete})
         Me.GetbygenreToolStrip.Location = New System.Drawing.Point(0, 0)
         Me.GetbygenreToolStrip.Name = "GetbygenreToolStrip"
-        Me.GetbygenreToolStrip.Size = New System.Drawing.Size(1443, 31)
+        Me.GetbygenreToolStrip.Size = New System.Drawing.Size(1443, 32)
         Me.GetbygenreToolStrip.TabIndex = 8
         Me.GetbygenreToolStrip.Text = "GetbygenreToolStrip"
         '
         'GenreToolStripLabel
         '
         Me.GenreToolStripLabel.Name = "GenreToolStripLabel"
-        Me.GenreToolStripLabel.Size = New System.Drawing.Size(61, 28)
+        Me.GenreToolStripLabel.Size = New System.Drawing.Size(61, 29)
         Me.GenreToolStripLabel.Text = "genre:"
         '
         'GenreToolStripTextBox
         '
         Me.GenreToolStripTextBox.Name = "GenreToolStripTextBox"
-        Me.GenreToolStripTextBox.Size = New System.Drawing.Size(100, 31)
+        Me.GenreToolStripTextBox.Size = New System.Drawing.Size(100, 32)
+        '
+        'btnAdd
+        '
+        Me.btnAdd.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
+        Me.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(177, 29)
+        Me.btnAdd.Text = "Add Song to Library"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
+        '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.btnDelete.Image = CType(resources.GetObject("btnDelete.Image"), System.Drawing.Image)
+        Me.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(215, 29)
+        Me.btnDelete.Text = "Delete Song from Library"
         '
         'Playlist
         '
@@ -256,4 +286,7 @@ Partial Class Playlist
     Friend WithEvents GetbygenreToolStrip As ToolStrip
     Friend WithEvents GenreToolStripLabel As ToolStripLabel
     Friend WithEvents GenreToolStripTextBox As ToolStripTextBox
+    Friend WithEvents btnAdd As ToolStripButton
+    Friend WithEvents btnDelete As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
 End Class

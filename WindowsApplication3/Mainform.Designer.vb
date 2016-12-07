@@ -39,6 +39,7 @@ Partial Class Mainform
         Me.timCounter = New System.Windows.Forms.Timer(Me.components)
         Me.lblSongTimer = New System.Windows.Forms.Label()
         Me.lstNowPlaying = New System.Windows.Forms.ListBox()
+        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -98,7 +99,7 @@ Partial Class Mainform
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(50, 29)
         Me.FileToolStripMenuItem.Text = "File"
@@ -166,6 +167,12 @@ Partial Class Mainform
         Me.lstNowPlaying.Size = New System.Drawing.Size(949, 344)
         Me.lstNowPlaying.TabIndex = 8
         '
+        'AddToolStripMenuItem
+        '
+        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(258, 30)
+        Me.AddToolStripMenuItem.Text = "Add Song to Library"
+        '
         'Mainform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -226,4 +233,5 @@ Partial Class Mainform
     Friend WithEvents timCounter As Timer
     Friend WithEvents lblSongTimer As Label
     Friend WithEvents lstNowPlaying As ListBox
+    Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -1,5 +1,7 @@
 ﻿Public Class Playlist
-    ' Private mSongs As New Music
+    Private mSongs As New Music
+    Private adapter As New SongLibraryDataSetTableAdapters.LibraryTableAdapter
+
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
@@ -72,4 +74,29 @@
         getGenre()
 
     End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        AddSong.ShowDialog()
+
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim index As Integer
+        index = dgvLibrary.CurrentCell.RowIndex
+        dgvLibrary.Rows.RemoveAt(index)
+
+    End Sub
+
+    '  Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+    '  If dgvLibrary.SelectedRows.Count > 0 Then
+    '  Dim title As String = (dgvLibrary.SelectedRows(0).Cells(0).Value)
+    '  If mSongs.Delete(title) Then
+    '             dgvLibrary.DataSource = mSongs.Items
+    'Else
+    '           MessageBox.Show("Unable to delete this apointment")
+    'End If
+    'End If
+
+    'End Sub
+
 End Class
