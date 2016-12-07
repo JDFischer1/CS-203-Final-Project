@@ -39,7 +39,6 @@ Partial Class Mainform
         Me.timCounter = New System.Windows.Forms.Timer(Me.components)
         Me.lblSongTimer = New System.Windows.Forms.Label()
         Me.lstNowPlaying = New System.Windows.Forms.ListBox()
-        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,7 +47,7 @@ Partial Class Mainform
         Me.btnRewind.Enabled = False
         Me.btnRewind.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRewind.Image = CType(resources.GetObject("btnRewind.Image"), System.Drawing.Image)
-        Me.btnRewind.Location = New System.Drawing.Point(58, 448)
+        Me.btnRewind.Location = New System.Drawing.Point(48, 329)
         Me.btnRewind.Name = "btnRewind"
         Me.btnRewind.Size = New System.Drawing.Size(97, 104)
         Me.btnRewind.TabIndex = 0
@@ -59,7 +58,7 @@ Partial Class Mainform
         Me.btnPlay.Enabled = False
         Me.btnPlay.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPlay.Image = CType(resources.GetObject("btnPlay.Image"), System.Drawing.Image)
-        Me.btnPlay.Location = New System.Drawing.Point(177, 451)
+        Me.btnPlay.Location = New System.Drawing.Point(199, 329)
         Me.btnPlay.Name = "btnPlay"
         Me.btnPlay.Size = New System.Drawing.Size(119, 104)
         Me.btnPlay.TabIndex = 1
@@ -70,7 +69,7 @@ Partial Class Mainform
         Me.btnStop.Enabled = False
         Me.btnStop.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStop.Image = CType(resources.GetObject("btnStop.Image"), System.Drawing.Image)
-        Me.btnStop.Location = New System.Drawing.Point(318, 450)
+        Me.btnStop.Location = New System.Drawing.Point(385, 331)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(119, 104)
         Me.btnStop.TabIndex = 2
@@ -81,7 +80,7 @@ Partial Class Mainform
         Me.btnFastForward.Enabled = False
         Me.btnFastForward.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnFastForward.Image = CType(resources.GetObject("btnFastForward.Image"), System.Drawing.Image)
-        Me.btnFastForward.Location = New System.Drawing.Point(457, 449)
+        Me.btnFastForward.Location = New System.Drawing.Point(565, 332)
         Me.btnFastForward.Name = "btnFastForward"
         Me.btnFastForward.Size = New System.Drawing.Size(115, 104)
         Me.btnFastForward.TabIndex = 3
@@ -93,13 +92,13 @@ Partial Class Mainform
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.PlaylistToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1066, 33)
+        Me.MenuStrip1.Size = New System.Drawing.Size(807, 33)
         Me.MenuStrip1.TabIndex = 5
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(50, 29)
         Me.FileToolStripMenuItem.Text = "File"
@@ -114,14 +113,14 @@ Partial Class Mainform
         '
         Me.PlaylistToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreatePlaylistToolStripMenuItem})
         Me.PlaylistToolStripMenuItem.Name = "PlaylistToolStripMenuItem"
-        Me.PlaylistToolStripMenuItem.Size = New System.Drawing.Size(78, 29)
-        Me.PlaylistToolStripMenuItem.Text = "Playlist"
+        Me.PlaylistToolStripMenuItem.Size = New System.Drawing.Size(77, 29)
+        Me.PlaylistToolStripMenuItem.Text = "Library"
         '
         'CreatePlaylistToolStripMenuItem
         '
         Me.CreatePlaylistToolStripMenuItem.Name = "CreatePlaylistToolStripMenuItem"
-        Me.CreatePlaylistToolStripMenuItem.Size = New System.Drawing.Size(206, 30)
-        Me.CreatePlaylistToolStripMenuItem.Text = "Create Playlist"
+        Me.CreatePlaylistToolStripMenuItem.Size = New System.Drawing.Size(211, 30)
+        Me.CreatePlaylistToolStripMenuItem.Text = "View Library"
         '
         'HelpToolStripMenuItem
         '
@@ -133,13 +132,13 @@ Partial Class Mainform
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(147, 30)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(211, 30)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'btnPause
         '
         Me.btnPause.Image = CType(resources.GetObject("btnPause.Image"), System.Drawing.Image)
-        Me.btnPause.Location = New System.Drawing.Point(177, 451)
+        Me.btnPause.Location = New System.Drawing.Point(199, 331)
         Me.btnPause.Name = "btnPause"
         Me.btnPause.Size = New System.Drawing.Size(119, 103)
         Me.btnPause.TabIndex = 6
@@ -152,9 +151,9 @@ Partial Class Mainform
         'lblSongTimer
         '
         Me.lblSongTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSongTimer.Location = New System.Drawing.Point(74, 607)
+        Me.lblSongTimer.Location = New System.Drawing.Point(56, 481)
         Me.lblSongTimer.Name = "lblSongTimer"
-        Me.lblSongTimer.Size = New System.Drawing.Size(188, 44)
+        Me.lblSongTimer.Size = New System.Drawing.Size(117, 44)
         Me.lblSongTimer.TabIndex = 7
         Me.lblSongTimer.Text = "0:00"
         '
@@ -162,22 +161,16 @@ Partial Class Mainform
         '
         Me.lstNowPlaying.FormattingEnabled = True
         Me.lstNowPlaying.ItemHeight = 20
-        Me.lstNowPlaying.Location = New System.Drawing.Point(58, 73)
+        Me.lstNowPlaying.Location = New System.Drawing.Point(48, 73)
         Me.lstNowPlaying.Name = "lstNowPlaying"
-        Me.lstNowPlaying.Size = New System.Drawing.Size(949, 344)
+        Me.lstNowPlaying.Size = New System.Drawing.Size(632, 224)
         Me.lstNowPlaying.TabIndex = 8
-        '
-        'AddToolStripMenuItem
-        '
-        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(258, 30)
-        Me.AddToolStripMenuItem.Text = "Add Song to Library"
         '
         'Mainform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1066, 797)
+        Me.ClientSize = New System.Drawing.Size(807, 558)
         Me.Controls.Add(Me.lstNowPlaying)
         Me.Controls.Add(Me.lblSongTimer)
         Me.Controls.Add(Me.btnFastForward)
@@ -233,5 +226,4 @@ Partial Class Mainform
     Friend WithEvents timCounter As Timer
     Friend WithEvents lblSongTimer As Label
     Friend WithEvents lstNowPlaying As ListBox
-    Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
 End Class

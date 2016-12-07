@@ -5,7 +5,6 @@ C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsAppli
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.vbprojResolveAssemblyReference.cache
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.Mainform.resources
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.Resources.resources
-C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.Playlist.resources
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.vbproj.GenerateResource.Cache
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.exe
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.xml
@@ -13,3 +12,5 @@ C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsAppli
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\bin\Debug\SongLibrary.mdf
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\bin\Debug\SongLibrary_log.ldf
 C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.AddSong.resources
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.Library.resources
+C:\Users\James Fischer\Desktop\VB Class\James_Fischer_Final_Project\WindowsApplication3\obj\Debug\WindowsApplication3.About.resources

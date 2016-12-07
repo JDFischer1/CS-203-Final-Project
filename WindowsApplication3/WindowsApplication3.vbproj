@@ -86,6 +86,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddSong.Designer.vb">
       <DependentUpon>AddSong.vb</DependentUpon>
     </Compile>
@@ -115,10 +121,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Playlist.Designer.vb">
-      <DependentUpon>Playlist.vb</DependentUpon>
+    <Compile Include="Library.Designer.vb">
+      <DependentUpon>Library.vb</DependentUpon>
     </Compile>
-    <Compile Include="Playlist.vb">
+    <Compile Include="Library.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SongLibraryDataSet.Designer.vb">
@@ -131,6 +137,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSong.resx">
       <DependentUpon>AddSong.vb</DependentUpon>
     </EmbeddedResource>
@@ -143,8 +152,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Playlist.resx">
-      <DependentUpon>Playlist.vb</DependentUpon>
+    <EmbeddedResource Include="Library.resx">
+      <DependentUpon>Library.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

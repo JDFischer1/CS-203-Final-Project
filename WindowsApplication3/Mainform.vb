@@ -6,8 +6,7 @@
     Const timeColumn = 3
 
     Private Sub CreatePlaylistToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreatePlaylistToolStripMenuItem.Click
-        Playlist.ShowDialog()
-
+        Library.ShowDialog()
     End Sub
 
     Private Sub btnPlay_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
@@ -21,7 +20,7 @@
     Private Function convertSecondstoMinutesSeconds(ByVal numberSongSeconds As Integer)
         Dim songMinutes As Integer
         Dim songSeconds As Integer
-
+        'math to convert seconds to min:seconds
         songMinutes = numberSongSeconds \ 60
         songSeconds = (numberSongSeconds Mod 60)
 
@@ -53,9 +52,7 @@
 
     End Sub
 
-    Private Sub lstNowPlaying_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstNowPlaying.SelectedIndexChanged
 
-    End Sub
     Private Sub playSong()
         ' Get the song time and display in lblSongTimer (convert time from seconds to min:seconds)\
 
@@ -86,10 +83,11 @@
     End Sub
 
     Private Sub btnStop_Click(sender As Object, e As EventArgs) Handles btnStop.Click
-
+        'rules for button visibility/useability when stop is pushed
         If btnStop.Enabled = True Then
             btnStop.Enabled = False
             btnPlay.Visible = True
+            'pause timer
             timCounter.Enabled = False
         End If
 
@@ -120,11 +118,9 @@
             lblSongTimer.Text = convertSecondstoMinutesSeconds(numberSongSeconds)
         Else
             lstNowPlaying.SelectedIndex = lstNowPlaying.Items.Count - 1
-            '   lstNowPlaying.SelectedIndex = lstNowPlaying.SelectedIndex - 1
             numberSongSeconds = CInt(songList(lstNowPlaying.SelectedIndex).Cells(timeColumn).Value)
             lblSongTimer.Text = convertSecondstoMinutesSeconds(numberSongSeconds)
-            '        If lstNowPlaying.SelectedIndex = 0 Then
-            '       btnRewind.Enabled = False
+
         End If
 
     End Sub
@@ -133,8 +129,13 @@
         Me.Close()
     End Sub
 
-    Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
+    Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs)
         AddSong.ShowDialog()
+
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        About.ShowDialog()
 
     End Sub
 End Class
