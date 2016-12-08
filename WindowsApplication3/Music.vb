@@ -4,13 +4,6 @@
     Private mGenre As String
     Private mSongTime As Integer
     Private adapter As New SongLibraryDataSetTableAdapters.LibraryTableAdapter
-    ' Public Sub New(ByVal pTitle As String, ByVal pArtist As String, ByVal pGenre As String, ByVal pSongTime As Integer)
-    '    mTitle = pTitle
-    '   mArtist = pArtist
-    '  mGenre = pGenre
-    ' mSongTime = pSongTime
-    'End Sub
-
 
     Public Function GetByGenre(ByVal genre As String) As DataTable
         Dim table As DataTable = adapter.GetData()
@@ -18,36 +11,22 @@
         Return table
 
     End Function
-    'Public Function getTitle(ByVal title As String)
-    '    Dim table As DataTable = adapter.GetData()
-    '    table.DefaultView.RowFilter = "Title" & title
-    '    Return mTitle
-
-    'End Function
 
     Public Function Insert(ByVal title As String, ByVal Artist As String, ByVal genre As String, ByVal seconds As Integer) As Boolean
         Try
-
             adapter.Insert(title, Artist, genre, seconds)
             Return True
-
         Catch ex As Exception
             MessageBox.Show("Insert error")
             Return False
         End Try
     End Function
-
-    ' Public Function Delete(ByVal title As String) As Boolean
-    'Dim rowsAffected As String = adapter.Delete(title)
-    'Return rowsAffected > 0
-    'End Function
     Public ReadOnly Property Items As DataTable
         Get
             Return adapter.GetData()
         End Get
     End Property
     Public Function FindByTitle(ByVal title As String) As SongLibraryDataSet.LibraryRow
-
         Dim table As SongLibraryDataSet.LibraryDataTable
         table = adapter.GetData()
         Return table.FindBySong_Title(title)
